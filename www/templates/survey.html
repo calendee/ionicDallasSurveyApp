@@ -1,0 +1,21 @@
+<ion-view view-title="Survey" id="survey">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="question in sCtrl.questions" class="item-text-wrap">
+                <div class="row">
+                    <div class="col col-67">{{question.question}}</div>
+                    <div class="col col-33">
+                        <button class="button button-balanced button-block icon-left ion-checkmark-round" ng-disabled="question.$answered" ng-click="sCtrl.recordResponse(question, 'yes')">
+                            <span ng-if="!question.$answered">Yes</span>
+                            <span ng-if="question.$answered">&nbsp;{{question.results.yes}}</span>
+                        </button>
+                        <button class="button button-assertive button-block icon-left ion-close-round" ng-disabled="question.$answered" ng-click="sCtrl.recordResponse(question, 'no')">
+                            <span ng-if="!question.$answered">No</span>
+                            <span ng-if="question.$answered">&nbsp;{{question.results.no}}</span>
+                        </button>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

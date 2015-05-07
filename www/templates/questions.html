@@ -1,0 +1,13 @@
+<ion-view view-title="Questions">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-clear icon ion-ios-plus-empty" ng-click="qCtrl.openQuestionEditor()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-text-wrap" ng-repeat="(key, question) in qCtrl.questions">{{question.question}}
+                <ion-option-button class="button-info button-assertive" ng-click="qCtrl.deleteQuestion(key)">Delete</ion-option-button>
+                <ion-option-button class="button-balanced" ng-click="qCtrl.openQuestionEditor(question, key)">Edit</ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,24 @@
+.button.disabled, .button[disabled] {
+  opacity: 0.75;
+  cursor: default !important;
+  pointer-events: none;
+}
+
+#survey .item .row {
+    padding : 0;
+    margin: 0;
+}
+
+#survey .item .row .col {
+    padding : 0;
+    margin: 0;
+}
+
+#survey .item .row .col .button{
+    display: block;
+    margin: 0;
+}
+
+#survey .item .row .col .button:first-child{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,19 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Question Editor</h1>
+        <button class="button button-clear icon ion-ios-close-empty" ng-click="qCtrl.closeQuestionEditor()"></button>
+    </ion-header-bar>
+    <ion-content>
+        <form name="questionForm" novalidate ng-submit="qCtrl.saveQuestion()">
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Question</span>
+                    <input type="text" placeholder="Enter The Question Here" name="question" ng-model="qCtrl.currentQuestion.question">
+                </label>
+            </div>
+            <div class="padding-horizontal">
+                <button class="button button-full button-balanced">Save</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>
